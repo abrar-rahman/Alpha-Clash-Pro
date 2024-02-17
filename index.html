@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
   <meta charset="UTF-8">
@@ -16,21 +16,126 @@
 
 
 
-<body>
-  <section class="home">
+<body class=" bg-[#010313] font-poppins">
+  <main class="min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
 
-  </section>
+    <!-- home-screen -->
+    <section id="home-screen" class=" min-h-screen text-white flex border justify-center items-center ">
+      <div class="flex flex-col items-center gap-8">
+        <h1 class="text-8xl font-extrabold anton-regular uppercase ">Alpha Clash Pro</h1>
+        <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+        <!-- <button onclick="play()" class="btn bg-white text-black">Play Now</button> -->
+        <button onclick="play()" class="btn ">Play Now</button>
+      </div>
+
+    </section>
+
+    <!-- Playground start -->
+    <section id="play-ground" class=" hidden">
+      <!-- Playground container -->
+      <div class="flex flex-col items-center gap-20 pt-20">
+        <!-- Screen -->
+        <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313cc]  bg-[#FFFFFFB3]">
+          <div class="flex justify-center ">
+            <p class="bg-[#2F2941] px-8 py-3 rounded-b-xl text-white">Don't watch keyboard while playing...</p>
+          </div>
+
+          <div class="flex justify-center items-center h-full">
+            <p id="current-alphabet" class="text-black text-7xl font-bold uppercase">Y</p>
+          </div>
+
+        </div>
 
 
-  <section class="play-ground">
 
 
-  </section>
+        <!-- Keyboard start -->
+        <div>
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd id="q" class="kbd">q</kbd>
+            <kbd id="w" class="kbd">w</kbd>
+            <kbd id="e" class="kbd">e</kbd>
+            <kbd id="r" class="kbd">r</kbd>
+            <kbd id="t" class="kbd">t</kbd>
+            <kbd id="y" class="kbd">y</kbd>
+            <kbd id="u" class="kbd">u</kbd>
+            <kbd id="i" class="kbd">i</kbd>
+            <kbd id="o" class="kbd">o</kbd>
+            <kbd id="p" class="kbd">p</kbd>
+          </div>
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd id="a" class="kbd">a</kbd>
+            <kbd id="s" class="kbd">s</kbd>
+            <kbd id="d" class="kbd">d</kbd>
+            <kbd id="f" class="kbd">f</kbd>
+            <kbd id="g" class="kbd">g</kbd>
+            <kbd id="h" class="kbd">h</kbd>
+            <kbd id="j" class="kbd">j</kbd>
+            <kbd id="k" class="kbd">k</kbd>
+            <kbd id="l" class="kbd">l</kbd>
+          </div>
+          <div class="flex justify-center gap-1 my-1 w-full">
+            <kbd id="z" class="kbd">z</kbd>
+            <kbd id="x" class="kbd">x</kbd>
+            <kbd id="c" class="kbd">c</kbd>
+            <kbd id="v" class="kbd">v</kbd>
+            <kbd id="b" class="kbd">b</kbd>
+            <kbd id="n" class="kbd">n</kbd>
+            <kbd id="m" class="kbd">m</kbd>
+            <kbd class="kbd">/</kbd>
+          </div>
+        </div>
+
+        <!-- keyboard end -->
+
+
+        <!-- life score -->
+        <div class="flex justify-between w-2/3">
+          <!-- Display life -->
+          <button class="btn rounded-full bg-purple-500 text-white px-4 border-white">
+
+            <img src="images/Group 24.svg" alt="">
+            <span id="current-life">5</span>
+          </button>
+          <!-- Display score -->
+          <button class="btn rounded-full bg-purple-500 text-white px-4 border-white">
+            Score
+            <img src="images/Group 28.svg" alt="">
+            <span id="current-score">0</span>
+          </button>
+        </div>
 
 
 
 
 
+
+      </div>
+
+    </section>
+    <!-- Playground end -->
+
+
+
+    <!-- Final score start -->
+    <section id="final-score" class="flex justify-center border min-h-screen hidden items-center text-center">
+
+      <div class="text-white space-y-3 bg-[#FFFFFF33] py-12 px-6 rounded-lg">
+        <h1 class="text-8xl">
+          <span class="font-extrabold">Score:</span>
+          <span id="last-score">14</span>
+        </h1>
+        <button class="btn">Play Again</button>
+        <p>Practice will make you a pro.</p>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="scripts/alpha-clash.js"></script>
+  <script src="scripts/utility.js"></script>
 </body>
 
 </html>
